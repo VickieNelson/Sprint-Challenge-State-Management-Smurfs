@@ -3,3 +3,28 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+img {
+  width: 100%;
+}
+
+h1 {
+  color: darkblue;
+}
+
+h2 {
+  font-size: 48px;
+  color: lightblue;
+  text-shadow: 0 0 3px darkblue, 0 0 30px #33a1de;
+}
+
+.smurfCardDisplay {
+  width: 300px;
+  border: 2px dotted blue;
+  margin-left: 38%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h3 {
+  color: #33a1de;
+}
