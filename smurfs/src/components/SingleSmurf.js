@@ -1,6 +1,6 @@
 import React from "react";
 
-const Smurf = (props) => {
+export const Smurf = (props) => {
   console.log("single smurf", props);
 
   return (
@@ -11,3 +11,5 @@ const Smurf = (props) => {
     </div>
   );
 };
+
+export default Smurf;

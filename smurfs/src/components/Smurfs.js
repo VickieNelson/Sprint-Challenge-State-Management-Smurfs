@@ -1,6 +1,6 @@
 import React, { useContext, createFactory } from "react";
 import SmurfsContext from "../contexts/SmurfsContext";
-import SingleSmurf from "../components/SingleSmurf";
+import SingleSmurf from "./SingleSmurf";
 
 const Smurfs = () => {
   const { smurfs } = useContext(SmurfsContext);
@@ -12,9 +12,11 @@ const Smurfs = () => {
       </div>
       <div>
         {smurfs.map((smurf) => (
-          <Smurf key={smurf.id} smurf={smurf} />
+          <SingleSmurf key={smurf.id} smurf={smurf} />
         ))}
       </div>
     </div>
   );
 };
+
+export default Smurfs;
