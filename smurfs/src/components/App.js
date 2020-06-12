@@ -7,6 +7,9 @@ import SmurfsContext from "../contexts/SmurfsContext";
 import Smurfs from "./Smurfs";
 import AddSmurf from "./AddSmurf";
 import "./App.css";
+
+var imageName = require("../images/smurfsimage.jpg");
+
 export default function App() {
   const [smurfs, setSmurfs] = useState([]);
 
@@ -36,5 +39,20 @@ export default function App() {
 
   console.log("smurfs", smurfs);
 
-  return <div></div>;
+  return (
+    <div className='App'>
+      <SmurfsContext.Provider value={{ smurfs }}>
+        <img src={imageName} />
+        <h1>Welcome to Smurf Town</h1>
+
+        <div className='image-box'></div>
+        <Smurfs />
+
+        <AddSmurf addSmurf={addSmurf} />
+      </SmurfsContext.Provider>
+      <section>
+        <div className='image-botom'></div>
+      </section>
+    </div>
+  );
 }

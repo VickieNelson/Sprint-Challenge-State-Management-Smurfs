@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./AddSmurf.css";
+var imageName = require("../images/smurfsimage.jpg");
 
 export default function AddSmurf(props) {
   const [newSmurf, setNewSmurf] = useState({
@@ -29,32 +30,38 @@ export default function AddSmurf(props) {
   };
 
   return (
-    <div className='InputBoxes'>
-      <h1> Add a Smurf!</h1>
-      <input
-        type='text'
-        name='name'
-        value={newSmurf.name}
-        onChange={handleChanges}
-        placeholder='  Smurf name'
-      />
-      <input
-        type='text'
-        name='age'
-        value={newSmurf.age}
-        onChange={handleChanges}
-        placeholder='  Smurf age'
-      />
-      <input
-        type='text'
-        name='height'
-        value={newSmurf.height}
-        onChange={handleChanges}
-        placeholder='  Smurf height'
-      />
-      <button className='button' onClick={handleSubmit}>
-        Add Smurf
-      </button>
+    <div className='smurf-card'>
+      <h1> Create a Smurf!</h1>
+      <div className='InputBoxes'>
+        <input
+          type='text'
+          name='name'
+          value={newSmurf.name}
+          onChange={handleChanges}
+          placeholder='  Name'
+        />
+        <input
+          type='text'
+          name='age'
+          value={newSmurf.age}
+          onChange={handleChanges}
+          placeholder='  Age'
+        />
+        <input
+          type='text'
+          name='height'
+          value={newSmurf.height}
+          onChange={handleChanges}
+          placeholder='  Height'
+        />
+      </div>
+      <span>
+        <button className='button' onClick={handleSubmit}>
+          Add Smurf
+        </button>
+      </span>
+
+      <img src={imageName} className='footerImage' />
     </div>
   );
 }

@@ -8,9 +8,9 @@ const Smurfs = () => {
   return (
     <div>
       <div>
-        <h1>The Smurf Village</h1>
+        <h2>Smurf Village</h2>
       </div>
-      <div>
+      <div className='smurfCardDisplay'>
         {smurfs.map((smurf) => (
           <SingleSmurf key={smurf.id} smurf={smurf} />
         ))}
